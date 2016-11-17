@@ -1,0 +1,125 @@
+﻿@model  Foozball_Mania.Models.Player
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var defaultText = "---Select---";
+        //get Player values to populate in listbox
+        $.get('@Url.Action("GetPlayers", "Home")', function (data) {
+
+            $('#Player1-list').append($('<option>').text(defaultText).val(0));
+            $('#Player2-list').append($('<option>').text(defaultText).val(0));
+            $.each(data, function (index, PlayerObject, LastName) {
+                $('#Player1-list').append($('<option>').text(PlayerObject.Name + " " + PlayerObject.FamilyName).val(PlayerObject.index));
+                $('#Player2-list').append($('<option>').text(PlayerObject.Name + " " + PlayerObject.FamilyName).val(PlayerObject.index));
+            });
+        });
+
+        $("#MatchResult-form").submit(function (e) {
+            e.preventDefault();
+
+            //Retrieve Player list box selections
+            var player1 = $("#Player1-list option:selected").text();
+            var player2 = $("#Player2-list option:selected").text();
+
+            //Test if both player name seletions where made
+            if (player1 === defaultText || player2 === defaultText)
+            {
+                alert("Please ensure both player names have been selected.")
+                return
+            }
+            //Test if the same player name selections where made
+            if (player1 === player2) {
+                alert("Please select unique player names.")
+                return
+            }
+
+            //Assign Player score values to variables
+            var player1Score = $.trim($('#Player1-score').val());
+            var player2Score = $.trim($('#Player2-score').val());
+
+            //Get timestamp
+            var timeStamp = "Empty";
+
+            //Match result var
+            var MatchResults
+            //Test which player won match result, if a tie player1 will be saved as the winner in the table
+            if (parseInt(player1Score) < parseInt(player2Score))
+            {
+                //Player 2 wins
+                MatchResults  = {
+                    "PlayerWin"     : player2,
+                    "PlayerLoose"   : player1,
+                    "PlayerWScore"  : player2Score,
+                    "PlayerLScore"  : player1Score
+                };
+            }
+            else
+            {
+                //Player 1 wins or a tie
+                MatchResults = {
+                    "PlayerWin": player1,
+                    "PlayerLoose": player2,
+                    "PlayerWScore": player1Score,
+                    "PlayerLScore": player2Score
+               }
+            }
+
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType:'json',
+                type: 'POST',
+                url: '@Url.Action("MatchResult", "Home")',
+                data: JSON.stringify(MatchResults),
+                success: function (response) {
+                    alert(response);
+      
+                },
+                error: function(){
+                    alert("An error has occured");
+                }
+            });
+        })
+    });
+</script>
+
+<h2>Match Result Capture</h2>
+
+<form id="MatchResult-form">
+    <fieldset>
+        <label>
+            Select Player 1
+        </label>
+        <select id="Player1-list">
+        </select>
+        <br />
+        <label>Player 1 Score</label>
+        <input id="Player1-score" type="text" placeholder="Value between 1 - 100" required>
+        <br/>
+        <label>VS</label>
+        <br />
+        <label>
+            Select Player 2
+        </label>
+        <select id="Player2-list"></select>
+        <br/>
+        <label>Player 2 Score</label>
+        <input id="Player2-score" type="text" placeholder="Value between 1 - 100" required>
+        <br />
+        <br />
+        <button type="submit" id="btn-submit" data-spinner="right">
+            Submit
+        </button>
+        <br />
+        <p id="project-create-feedback"></p>
+    </fieldset>
+</form>
+
+
+
+

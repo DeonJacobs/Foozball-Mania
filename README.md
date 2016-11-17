@@ -1,2 +1,3 @@
 # Foozball-Mania
-Showcasing coding style and architecture
+Showcasing ASP.Net MVC coding style and architecture considerations implementing Foozball Web Based Application
+

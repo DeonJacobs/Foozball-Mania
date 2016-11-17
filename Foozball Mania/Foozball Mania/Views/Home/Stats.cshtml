@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "Stats";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>View Player Stats</h2>
+<form id="PlayerSelection-form">
+    <fieldset>
+        <legend>
+            Compare Players Win/Loss Performance
+        </legend>
+        <p>To view one player's statistics select Player 1 but not Player 2. To view Player 1 vs. Player 2 statistics select both. </p>
+        <label>
+            Select Player 1
+        </label>
+        <select id="Player1-list"></select>
+        <br />
+        <label>VS</label>
+        <br />
+        <label>
+            Select Player 2
+        </label>
+        <select id="Player2-list"></select>
+        <br />
+        <br />
+        <button type="submit" id="btn-submit" data-spinner="right">
+            Submit
+        </button>
+        <br />
+        <p id="project-create-feedback"></p>
+    </fieldset>
+</form>
+<div id="container" style="min-width: 310px; height:300px; margin:0 auto"></div>
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var defaultText = "---Select---";
+        //get Player values to populate listbox from server
+        $.get('@Url.Action("GetPlayers", "Home")', function (data) {
+
+            $('#Player1-list').append($('<option>').text(defaultText).val(0));
+            $('#Player2-list').append($('<option>').text(defaultText).val(0));
+            $.each(data, function (index, PlayerObject, LastName) {
+                $('#Player1-list').append($('<option>').text(PlayerObject.Name + " " + PlayerObject.FamilyName).val(PlayerObject.index));
+                $('#Player2-list').append($('<option>').text(PlayerObject.Name + " " + PlayerObject.FamilyName).val(PlayerObject.index));
+            });
+        });
+        //submit form
+        $("#PlayerSelection-form").submit(function (e) {
+            e.preventDefault();
+
+            //Retrieve Player list box selections
+            var player1 = $("#Player1-list option:selected").text();
+            var player2 = $("#Player2-list option:selected").text();
+
+            //Test if any player selections were made
+            if (player1 === defaultText && player2 === defaultText) {
+                alert("Please ensure that at least one player has been selected.");
+                return
+            }
+            //Test if the same player name selections where made
+            if (player1 === player2) {
+                alert("Please select unique player names.")
+                return
+            }
+            var PlayerSelection
+            //Test if one or two players have been selected
+            if (player1 != defaultText && player2 === defaultText) {
+                //One player selected
+                PlayerSelection = {
+                    "Player1": player1,
+                    "Player2": "Empty"
+                }
+            } else if (player1 != defaultText && player2 != defaultText) {
+                //Two selections where made
+                PlayerSelection = {
+                    "Player1": player1,
+                    "Player2": player2
+                }
+            }
+            else {
+
+                alert("An incorrect selection was made");
+                return
+            }
+            //Post Player selection back to the server
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '@Url.Action("PlayerSelect", "Home")',
+                data: JSON.stringify(PlayerSelection),
+                success: function (response) {
+                    alert(response);
+
+                },
+                error: function () {
+                    alert("An error has occured");
+                }
+            });
+        })
+        $(function () {
+            Highcharts.chart('container', {
+                title: {
+                    text: 'John Cola'
+                },
+                xAxis: [{
+                    categories: ['2016-11-17:10', '2016-11-17:11', '2016-11-17:12', '2016-11-17:14', '2016-11-17:15'],
+                    crosshair: true
+                }],
+                yAxis: [{ // Primary yAxis
+                    labels: {
+                        format: '{value}%',
+                        style: {
+                            color: Highcharts.getOptions().colors[2]
+                        }
+                    },
+                    title: {
+                        text: 'Win Percentage',
+                        style: {
+                            color: Highcharts.getOptions().colors[2]
+                        }
+                    },
+                    opposite: true
+
+                }, { // Secondary yAxis
+                    gridLineWidth: 0,
+                    title: {
+                        text: 'Win Loss Count',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    },
+                    labels: {
+                        format: '{value}',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    }
+                }],
+                series: [{
+                    type: 'column',
+                    name: 'Win Count',
+                    yAxis: 1,
+                    data: [3, 6, 1, 3, 4]
+                }, {
+                    type: 'column',
+                    name: 'Loss Count',
+                    yAxis: 1,
+                    data: [2, 3, 5, 7, 6]
+                }, {
+                    type: 'spline',
+                    name: 'Win Percentage',
+                    data: [60, 67, 17, 30, 40],
+                    marker: {
+                        lineWidth: 2,
+                        lineColor: Highcharts.getOptions().colors[3],
+                        fillColor: 'white'
+                    }
+                }, ]
+            });
+        });
+    });
+</script>
+

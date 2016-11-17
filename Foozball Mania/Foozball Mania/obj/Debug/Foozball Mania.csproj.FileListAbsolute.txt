@@ -1,0 +1,61 @@
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\ApplicationInsights.config
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\csc.exe
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\System.Collections.Immutable.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\vbc.exe
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\VBCSCompiler.exe
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\roslyn\VBCSCompiler.exe.config
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Foozball Mania.dll.config
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Foozball Mania.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Foozball Mania.pdb
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Antlr3.Runtime.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.Web.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.WindowsServer.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.ApplicationInsights.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.Web.Infrastructure.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Newtonsoft.Json.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Helpers.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Mvc.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Optimization.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Razor.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.Deployment.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.Razor.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\WebGrease.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.Web.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.AI.WindowsServer.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.ApplicationInsights.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Helpers.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Mvc.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Optimization.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.Razor.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.Deployment.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\System.Web.WebPages.Razor.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Antlr3.Runtime.pdb
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\Newtonsoft.Json.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\obj\Debug\Foozball Mania.csprojResolveAssemblyReference.cache
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\obj\Debug\Foozball Mania.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\obj\Debug\Foozball Mania.pdb
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\EntityFramework.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\EntityFramework.SqlServer.dll
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\EntityFramework.xml
+c:\users\family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\EntityFramework.SqlServer.xml
+C:\Users\Family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\StructureMap.dll
+C:\Users\Family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\WebActivator.dll
+C:\Users\Family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\StructureMap.pdb
+C:\Users\Family\documents\visual studio 2015\Projects\Foozball Mania\Foozball Mania\bin\StructureMap.xml
